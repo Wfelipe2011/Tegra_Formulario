@@ -18,7 +18,7 @@ function App(){
     );
   }
   function aoEnviarForm(dados){
-    console.log(dados);
+    alert(`${dados.nome} ${dados.sobrenome} ${dados.cpf}`);
   }
 
   function validarCPF(cpf){
