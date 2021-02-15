@@ -11,10 +11,22 @@ function App(){
         variant="h3"
         component="h1"
         >Formulário de cadastro</Typography >
-        <FormularioCadastro />
+        <FormularioCadastro 
+        validarCPF={validarCPF}
+        aoEnviar={aoEnviarForm} />
       </Container>
     );
   }
+  function aoEnviarForm(dados){
+    console.log(dados);
+  }
 
+  function validarCPF(cpf){
+    if(cpf.length !== 11){
+      return {valido:false, texto:"CPF deve ter 11 digitos"}
+    }else{
+      return {valido:true, texto:""}
+    }
+  }
 
 export default App;
